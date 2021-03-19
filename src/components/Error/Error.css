@@ -1,0 +1,9 @@
+.error_block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.img_error {
+    max-width: 400px;
+    padding: 30px;
+}

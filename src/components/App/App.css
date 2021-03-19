@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: linear-gradient(rgb(253, 253, 253), rgb(207, 206, 214));
+  padding-top: 70px;
+}
