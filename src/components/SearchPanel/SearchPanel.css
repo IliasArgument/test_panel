@@ -1,5 +1,4 @@
 .forms {
-    /* display: flex; */
     width: 100%;
     height: 150px;
     background: rgb(184, 180, 199);
@@ -9,9 +8,16 @@
     display: flex;
     width: 90%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto;
     padding-top: 88px;
+}
+.panel_block1 {
+    display: flex;
+    width: 80%;
+}
+.panel_block2 {
+    display: flex;
 }
 
 .text {
@@ -47,4 +53,52 @@
 
 .F {
     padding-left: 10px;
+}
+
+@media (max-width: 650px) { 
+    .forms_panel {
+        display: flex;
+        width: 90%;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+    .panel_block1 {
+        display: block;
+
+    }
+    .panel_block2 {
+        display: block;
+    }
+    
+    .text {
+        width: 80%;
+        height: 30px;
+        margin: 10px;
+        border-radius: 10px;
+        border: none;
+        padding-left: 10px;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: wrap;
+
+    }
+    .block_check {
+        display: flex;
+    }
+    
+    .check {
+        display: flex;
+        align-items: baseline;
+    }
+    
+    .checkbox {
+        padding: 20px;
+        width: 40px;
+        height: 20px;
+        outline: none;
+        cursor: pointer;
+    }
 }

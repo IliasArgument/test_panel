@@ -14,6 +14,7 @@ const SearchPanel = ({ data }) => {
     <>
       <form className="forms" onSubmit={state.onSubmitChange}>
         <div className="forms_panel">
+          <div className="panel_block1">
           <Input
             onChange={state.onChange}
             value={state.searchName}
@@ -35,6 +36,8 @@ const SearchPanel = ({ data }) => {
             name="age"
             blur={state.onBlurHide}
           />
+          </div>
+          <div className="panel_block2">
           <Checkbox
             onChange={state.onChangeCheck}
             checked={state.checkMale}
@@ -49,6 +52,7 @@ const SearchPanel = ({ data }) => {
             images={Female}
             blur={state.onBlurHide}
           />        
+          </div>
         </div>
       </form>
       <Table newArr={state.newArr} />
