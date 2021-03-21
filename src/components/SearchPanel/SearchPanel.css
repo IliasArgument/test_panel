@@ -1,12 +1,17 @@
 .forms {
+    /* display: flex; */
+    width: 100%;
+    height: 150px;
+    background: rgb(184, 180, 199);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.forms_panel {
     display: flex;
     width: 90%;
-    background: rgba(130, 216, 44, 0.753);
-    margin: 0 auto;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid rgb(130, 224, 37);
-    border-radius: 10px;
+    margin: 0 auto;
+    padding-top: 88px;
 }
 
 .text {
@@ -18,6 +23,9 @@
     padding-left: 20px;
     outline: none;
     cursor: pointer;
+}
+.block_check {
+    display: flex;
 }
 
 .check {
@@ -31,18 +39,12 @@
     height: 20px;
     outline: none;
     cursor: pointer;
-
 }
 
 .M {
-    color: darkblue;
-    font-size: 1.2rem;
-    font-weight: 600;
+   padding-left: 10px;
 }
 
 .F {
-    color: rgb(139, 0, 116);
-    font-size: 1.2rem;
-    font-weight: 600;
-
+    padding-left: 10px;
 }

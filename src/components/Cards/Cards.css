@@ -1,34 +1,20 @@
 .Card {
     max-width: 90%;
     height: 100%;
-    margin: 20px auto;
+    margin: 50px auto;
     align-items: center;
     display: flex;
     padding: 10px;
+    cursor: pointer;
 }
-.lists {
-    padding: 30px;
-    background:rgba(131, 224, 37, 0.418);
-    max-width: 300px;
-    max-height: 250px;
-    list-style-type: none;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0 auto;
-    border: 1px solid rgb(122, 196, 47);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
-}
-.lists:last-child {
-    padding-left: 0;
+.Card:hover {
+  transform: scale(1.1);
+  transition: all 1s ease;
 }
 
-li {
-    display: flex;
-    align-items: center;
+.item {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding-left: 10px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-label {
-    font-weight: 600;
-    padding: 2px 12px;
-}
-
-

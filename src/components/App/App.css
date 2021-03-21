@@ -7,6 +7,6 @@
   max-width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  background: linear-gradient(rgb(253, 253, 253), rgb(207, 206, 214));
-  padding-top: 70px;
+  background: rgba(255, 211, 211, 0.74);
 }
+ 

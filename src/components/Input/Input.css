@@ -1,0 +1,10 @@
+.text {
+    width: 60%;
+    height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 20px;
+    outline: none;
+    cursor: pointer;
+}

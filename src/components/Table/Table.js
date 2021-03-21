@@ -2,11 +2,11 @@ import React from "react";
 import Cards from "../Cards/Cards";
 import "./Table.css";
 
-const Table = ({ arr }) => {
+const Table = ({ newArr }) => {
   return (
     <div className="Table">
-      {arr.map((items) => (
-        <Cards items={items} key={items.name} />
+      {newArr.map((items, i) => (
+        <Cards items={items} key={items.name} count={i} />
       ))}
     </div>
   );

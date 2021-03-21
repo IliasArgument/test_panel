@@ -1,77 +1,57 @@
 import React from "react";
-import "./SearchPanel.css";
+import useAppState from "../App/hook";
 import Table from "../Table/Table";
-import UseAppState from "../App/hook";
+import Input from "../Input/Input";
+import Checkbox from "../Checkbox/Checkbox";
+import Male from "../../assets/img/male.png";
+import Female from "../../assets/img/female.png";
+import "./SearchPanel.css";
 
 const SearchPanel = ({ data }) => {
-  const {
-    searchName,
-    searchLast,
-    searchAge,
-    checkMale,
-    checkFemale,
-    arr,
-    onChange,
-    onChangeLast,
-    onChangeAge,
-    onChangeTargetMale,
-    onChangeTargetFemale,
-    onSubmitChange,
-    onBlurHide
-  } = UseAppState({ data });
+  const { ...state } = useAppState({ data });
 
- 
   return (
     <>
-      <form className="forms" onSubmit={onSubmitChange}>
-        <input
-          onChange={onChange}
-          className="text"
-          type="text"
-          value={searchName}
-          name="name"
-          placeholder="...Name"
-        ></input>
-        <input
-          onChange={onChangeLast}
-          className="text"
-          type="text"
-          value={searchLast}
-          name="lastname"
-          placeholder="...LastName"
-        ></input>
-        <input
-          onChange={onChangeAge}
-          className="text"
-          type="text"
-          value={searchAge}
-          name="age"
-          placeholder="...Age"
-        ></input>
-        <label className="check">
-          <p className="M">M</p>
-          <input
-            onChange={onChangeTargetMale}
-            className="checkbox"
-            type="checkbox"
+      <form className="forms" onSubmit={state.onSubmitChange}>
+        <div className="forms_panel">
+          <Input
+            onChange={state.onChange}
+            value={state.searchName}
+            placeholder="...Name"
+            name="name"
+            blur={state.onBlurHide}
+          />
+          <Input
+            onChange={state.onChange}
+            value={state.searchLast}
+            placeholder="...Last name"
+            name="lastName"
+            blur={state.onBlurHide}
+          />
+          <Input
+            onChange={state.onChange}
+            value={state.searchAge}
+            placeholder="...Age"
+            name="age"
+            blur={state.onBlurHide}
+          />
+          <Checkbox
+            onChange={state.onChangeCheck}
+            checked={state.checkMale}
             name="M"
-            checked={checkMale}
-            onBlur={onBlurHide}
-          ></input>
-        </label>
-        <label className="check">
-          <p className="F">F</p>
-          <input
-            onChange={onChangeTargetFemale}
-            checked={checkFemale}
-            className="checkbox"
-            type="checkbox"
-            name="W"
-            onBlur={onBlurHide}
-          ></input>
-        </label>
+            images={Male}
+            blur={state.onBlurHide}          
+            />
+          <Checkbox
+            onChange={state.onChangeCheck}
+            checked={state.checkFemale}
+            name="F"
+            images={Female}
+            blur={state.onBlurHide}
+          />        
+        </div>
       </form>
-      <Table arr={arr} />
+      <Table newArr={state.newArr} />
     </>
   );
 };

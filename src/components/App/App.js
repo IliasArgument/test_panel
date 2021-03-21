@@ -1,12 +1,12 @@
 import React from "react";
-import "./App.css";
+import useAppState from "./hook";
 import SearchPanel from "../SearchPanel/SearchPanel";
 import Error from "../Error/Error";
-import Loaded from "../Loaded/Loaded";
-import UseAppState from "./hook";
+import Loaded from "../Loader/Loader";
+import "./App.css";
 
 const App = () => {
-  const { error, isLoaded, data } = UseAppState();
+  const { error, isLoaded, data } = useAppState();
 
   if (!error) {
     return <Error />;
