@@ -1,11 +1,14 @@
 .Cards {
     max-width: 90%;
     height: 100%;
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
     align-items: center;
     display: flex;
     padding: 30px 10px, 10px, 10px;
     cursor: pointer;
+}
+.title {
+  font-size: 14px;
 }
 .Cards_item {
   display: flex;
@@ -39,15 +42,18 @@
     padding: 10px;
     cursor: pointer;
 }
+.title {
+display: none;
+}
 .item_title {
-  font-size: 1.2rem;
+  font-size: .8rem;
 }
   .Card {
-    max-width: 100px;
-    height: auto;
+    max-width: 50px;
+    max-height: 100px;
   }
   .item {
-    font-size: 1rem;
+    font-size: .6rem;
     font-weight: 600;
     padding-left: 10px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
