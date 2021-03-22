@@ -1,7 +1,7 @@
 import React from "react";
 import "./Checkbox.css";
 
-const Checkbox = ({ onChange, checked, name, images, blur }) => {
+const Checkbox = ({ onChange, checked, name, images, blur}) => {
   return (
     <div>
       <label className="check">

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Input.css";
 
-const Input = ({ onChange, value, placeholder, name, blur }) => {
+const Input = ({ onChange, value, placeholder, name, blur}) => {
   return (
     <input
       onChange={onChange}

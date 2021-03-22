@@ -1,12 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .App {
   text-align: center;
-  max-width: 100%;
+  min-width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   background: rgba(255, 211, 211, 0.74);
+  overflow-y: hidden;
 }
- 

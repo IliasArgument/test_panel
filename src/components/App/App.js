@@ -7,13 +7,14 @@ import "./App.css";
 
 const App = () => {
   const { error, isLoaded, data } = useAppState();
-
+  
   if (!error) {
     return <Error />;
   }
   if (isLoaded) {
     return <Loaded />;
   }
+  
   return (
     <div className="App">
       <SearchPanel data={data} />

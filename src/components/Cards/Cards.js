@@ -6,20 +6,11 @@ import Typography from "@material-ui/core/Typography";
 import "./Cards.css";
 
 const useStyles = makeStyles({
-  root: {
-    minWidth: 250,
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
-  },
+
   title: {
     fontSize: 14,
   },
-  pos: {
-    marginBottom: 12,
-  },
+
   item: {
     display: "flex",
     alignItems: "baseline",
@@ -30,8 +21,8 @@ const Cards = ({ items, count }) => {
   const classes = useStyles();
 
   return (
-    <div className="Card">
-      <Card className={classes.root}>
+    <div className="Cards">
+      <Card className="Card">
         <CardContent>
           <Typography
             className={classes.title}
@@ -40,17 +31,17 @@ const Cards = ({ items, count }) => {
           >
             Карта {count + 1}
           </Typography>
-          <Typography variant="h5" component="h2" className={classes.item}>
-            Name: <span className="item"> {items.name}</span>
+          <Typography variant="h5" component="h2" className="Cards_item">
+            <span className="item_title">Name:</span> <span className="item"> {items.name}</span>
           </Typography>
-          <Typography variant="h5" component="h2" className={classes.item}>
-            Last name: <span className="item"> {items.lastname}</span>
+          <Typography variant="h5" component="h2" className="Cards_item">
+          <span className="item_title">Last Name:</span> <span className="item"> {items.lastname}</span>
           </Typography>
-          <Typography variant="h5" component="h2" className={classes.item}>
-            Age: <span className="item"> {items.age}</span>
+          <Typography variant="h5" component="h2" className="Cards_item">
+          <span className="item_title">Age:</span> <span className="item"> {items.age}</span>
           </Typography>
-          <Typography variant="h5" component="h2" className={classes.item}>
-            Sex: <span className="item"> {items.sex}</span>
+          <Typography variant="h5" component="h2" className="Cards_item">
+          <span className="item_title">Sex:</span> <span className="item"> {items.sex}</span>
           </Typography>
         </CardContent>
       </Card>
